@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef3f8;
+            padding: 24px;
+        }
+
+        .paper {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<a href="/">← Back</a>
+
+<h2>Search Results</h2>
+
+{% if results %}
+    <p>{{ results|length }} result(s)</p>
+
+    {% for paper in results %}
+        <div class="paper">
+            <div class="title">{{ paper.title }}</div>
+            <div><strong>Author:</strong> {{ paper.author }}</div>
+            <div><strong>Year:</strong> {{ paper.year }}</div>
+            <div><strong>Vita Type:</strong> {{ paper.vita_type }}</div>
+            <div><strong>Journal:</strong> {{ paper.journal_book }}</div>
+            <div><strong>Abstract:</strong> {{ paper.abstract }}</div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No results found.</p>
+{% endif %}
+
+</body>
+</html>

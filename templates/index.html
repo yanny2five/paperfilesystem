@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paper Search</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef3f8;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            width: 400px;
+            margin: auto;
+            border: 1px solid #ccc;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Search Papers</h2>
+
+    <form action="/search" method="post">
+        <label>Author</label>
+        <input type="text" name="author">
+
+        <label>Title</label>
+        <input type="text" name="title">
+
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+</body>
+</html>
