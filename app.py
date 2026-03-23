@@ -39,19 +39,21 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/initdb")
-def initdb():
-    init_db()
-    return "Database initialized."
-
-
 @app.route("/addtest")
 def addtest():
-    init_db()
+    # RESET TABLE COMPLETELY (fixes all corruption/issues)
     conn = connect_db()
     cursor = conn.cursor()
 
-    cursor.execute("DELETE FROM papers")
+    cursor.execute("DROP TABLE IF EXISTS papers")
+    conn.commit()
+    conn.close()
+
+    # recreate table
+    init_db()
+
+    conn = connect_db()
+    cursor = conn.cursor()
 
     rows = [
         (
@@ -76,7 +78,7 @@ def addtest():
             2024,
             "Journal Articles",
             "Computational Agriculture Journal",
-            "This paper explores the application of machine learning models to improve crop yield predictions and agricultural decision-making."
+            "This paper explores the application of machine learning models to improve crop yield predictions."
         ),
         (
             "David Lee",
@@ -92,7 +94,7 @@ def addtest():
             2023,
             "Journal Articles",
             "Land Use Policy Journal",
-            "This paper investigates strategies for optimizing land use under sustainability and policy constraints."
+            "This paper investigates strategies for optimizing land use under sustainability constraints."
         ),
         (
             "Robert Wilson",
@@ -100,7 +102,7 @@ def addtest():
             2019,
             "Research Reports",
             "Agricultural Systems Review",
-            "This study models food supply chains to analyze efficiency, resilience, and economic impacts."
+            "This study models food supply chains to analyze efficiency and resilience."
         )
     ]
 
@@ -112,7 +114,7 @@ def addtest():
     conn.commit()
     conn.close()
 
-    return "Test data added."
+    return "Test data added successfully."
 
 
 @app.route("/search", methods=["POST"])
