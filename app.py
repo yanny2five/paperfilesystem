@@ -56,35 +56,51 @@ def addtest():
     rows = [
         (
             "Bruce McCarl",
-            "Climate Policy Analysis",
+            "Economic Impacts of Climate Policy Instruments",
             2022,
             "Journal Articles",
-            "Journal of Policy",
-            "This paper analyzes the economic impacts of climate policy options."
+            "Journal of Environmental Economics",
+            "This paper evaluates the economic effects of different climate policy instruments, including carbon taxes and cap-and-trade systems."
         ),
         (
-            "John Smith",
-            "Agricultural Water Demand",
+            "Michael Green",
+            "Agricultural Water Demand Under Climate Variability",
             2021,
             "Research Reports",
-            "Water Economics Review",
-            "This paper studies agricultural water demand and planning."
+            "Water Resources Review",
+            "This study analyzes how climate variability influences agricultural water demand and resource allocation."
         ),
         (
-            "Jane Doe",
-            "Machine Learning in Agriculture",
+            "Sarah Johnson",
+            "Machine Learning Approaches for Crop Yield Prediction",
             2024,
             "Journal Articles",
-            "AI Agriculture Journal",
-            "This paper explores machine learning in agriculture."
+            "Computational Agriculture Journal",
+            "This paper explores the application of machine learning models to improve crop yield predictions and agricultural decision-making."
         ),
         (
-            "Anay Kaundinya",
-            "PM2.5 Effects on Plant Cells",
-            2026,
-            "Student Research",
-            "Student Research Journal",
-            "This study investigates PM2.5 effects on plant cells."
+            "David Lee",
+            "Energy Market Responses to Environmental Regulation",
+            2020,
+            "Book Chapters",
+            "Energy Economics Handbook",
+            "This chapter examines how energy markets respond to environmental regulations and policy changes."
+        ),
+        (
+            "Emily Chen",
+            "Sustainable Land Use and Policy Optimization",
+            2023,
+            "Journal Articles",
+            "Land Use Policy Journal",
+            "This paper investigates strategies for optimizing land use under sustainability and policy constraints."
+        ),
+        (
+            "Robert Wilson",
+            "Economic Modeling of Food Supply Chains",
+            2019,
+            "Research Reports",
+            "Agricultural Systems Review",
+            "This study models food supply chains to analyze efficiency, resilience, and economic impacts."
         )
     ]
 
